@@ -1,0 +1,132 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #f8f5f2, #eae3dc);
+    color: #3e3e3e;
+}
+
+/* NAVBAR */
+.nav {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+nav li {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #000;
+    opacity: 0.7;
+}
+
+/* MAIN */
+.main {
+    text-align: center;
+    padding: 60px 20px;
+}
+table {
+    margin: 0 auto;
+}
+/* TITLE */
+.main h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.main h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #9a8f85;
+    margin-bottom: 40px;
+}
+
+/* IMAGE STYLE (YEARBOOK FEEL) */
+.main img {
+    width: 200px;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.1),
+        inset 0 0 10px rgba(0,0,0,0.05);
+    filter: grayscale(20%) contrast(95%) brightness(102%);
+    transform: rotate(-2deg);
+    transition: 0.4s;
+}
+
+.main img:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* QUOTE */
+.main p {
+    margin-top: 30px;
+    font-size: 16px;
+    font-style: italic;
+    color: #6f6f6f;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* LITTLE VINTAGE TOUCH */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    opacity: 0.2;
+    pointer-events: none;
+}
+.main {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.nav {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
